@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
 	before_action :find_post, only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy]
 	
 	def index
 		@posts = Post.all.order("created_at DESC")
@@ -14,12 +15,13 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@post = Post.new(post_params)
+		@post = current_user.posts.create(post_params)
+		@post.save
 
-		if @post.save 
+		if @post.valid? 
 			redirect_to @post
 		else
-			render 'new'
+			render 'new', :status => :unprocessable_entity
 		end
 	end
 
