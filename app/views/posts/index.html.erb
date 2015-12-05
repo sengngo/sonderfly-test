@@ -1,6 +1,6 @@
 <h1>Posts.Index</h1>
 <% @posts.each do |post| %>
-	<%= image_tag post.photo, :class => 'img-responsive cover_photo' %>
+	<%= image_tag post.cover_photo %>
 	<h2><%= link_to post.title, post %></h2>
 	<p><%= post.intro %></p>
 	<p> By <%= post.user.full_name %></p>
