@@ -35,6 +35,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :last_name
       t.integer :photo_id
 
+      t.integer :role_id
+
       t.timestamps
     end
 
@@ -44,6 +46,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
     add_index :users, [:first_name, :last_name]
     add_index :users, :first_name
     add_index :users, :last_name
+
+    
     # add_index :users, :confirmation_token,   unique: true
     # add_index :users, :unlock_token,         unique: true
   end
