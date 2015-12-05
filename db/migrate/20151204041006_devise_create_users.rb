@@ -33,10 +33,10 @@ class DeviseCreateUsers < ActiveRecord::Migration
       ## Additional details
       t.string :first_name
       t.string :last_name
-      t.integer :photo_id
+      t.integer :string
 
       t.integer :role_id
-
+      t.string :profile_photo
       t.timestamps
     end
 

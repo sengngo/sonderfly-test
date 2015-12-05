@@ -1,6 +1,8 @@
+<%= image_tag :cover_photo %>
 <h1><%= @post.title %></h1>
 <h2><%= @post.intro %></h2>
 <p><%= @post.body %></p>
+
 
 <%= link_to "Edit", edit_post_path(@post) %>
  <%= link_to 'Delete', post_path(@post), :method => :delete, :date => {:confirm => 'Are you sure? This cannot be undone'} %>

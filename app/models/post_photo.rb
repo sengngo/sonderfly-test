@@ -1,4 +1,4 @@
-class Photo < ActiveRecord::Base
+class PostPhoto < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :post
 end

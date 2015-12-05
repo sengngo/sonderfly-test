@@ -8,6 +8,9 @@ class CreatePosts < ActiveRecord::Migration
       t.string :intro
       t.text :body
 
+      t.string :cover_photo
+      t.string :post_photo
+
       t.boolean :published, default: false
       t.boolean :private, default: false
 

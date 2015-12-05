@@ -1,7 +1,8 @@
 <%= simple_form_for @post do |f| %>
-	<%= f.input :title %>
-	<%= f.input :intro %>
-	<%= f.input :body %>
+	<%= f.input :cover_photo %>
+	<%= f.input :title, placeholder: 'Title of your story', :class => 'post_title', label: false %>
+	<%= f.input :intro, placeholder: 'Short Intro', :class => 'post_intro', label: false %>
+	<%= f.input :body, placeholder: 'Tell your story', :class => 'post_body', label: false %>
 
 	<%= f.button :submit %>
 <% end %>

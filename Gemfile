@@ -31,6 +31,8 @@ gem 'devise', '~> 3.4.1'
 
 gem 'simple_form', '~> 3.0.2'
 
+gem 'carrierwave'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
