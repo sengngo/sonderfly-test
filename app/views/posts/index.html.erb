@@ -1,6 +1,6 @@
 <h1>Posts.Index</h1>
 <% @posts.each do |post| %>
-	<%= image_tag post.cover_photo %>
+	<%= link_to (image_tag post.cover_photo), post %>
 	<h2><%= link_to post.title, post %></h2>
 	<p><%= post.intro %></p>
 	<p> By <%= post.user.full_name %></p>
