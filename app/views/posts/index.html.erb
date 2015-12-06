@@ -4,6 +4,8 @@
 	<h2><%= link_to post.title, post %></h2>
 	<p><%= post.intro %></p>
 	<p> By <%= post.user.full_name %></p>
+	<p><%= post.comments.count %> Comments</p>
+	<p><%= post.get_upvotes.size %> Likes</p>
 <% end %>
 
 <%= link_to "New Post", new_post_path %>

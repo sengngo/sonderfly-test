@@ -1,0 +1,8 @@
+ <% if current_user && current_user == @comment.user %>
+  <%= link_to 'Edit', edit_post_comment_path(@comment), :class => 'button' %>
+  <%= link_to 'Delete', post_comment_path(@comment),
+                  method: :delete,
+                  :class => "button",
+                  data: {confirm: "Are you sure? This cannot be undone."}  %>
+      
+<% end %>
